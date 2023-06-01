@@ -17,4 +17,5 @@ data_1 <- read_excel("S:/Supply Chain Projects/LOGISTICS/SCP/Cost Saving Reporti
 
 # Currently, need to work on data folder work first..
 # FG, RM.. 
-
+# I may try folder reading code
+# Let linda know after folder migration is done
