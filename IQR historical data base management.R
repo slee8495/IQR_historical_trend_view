@@ -401,3 +401,191 @@ data_13 %>%
 
 rm(data_13_date)
 
+
+
+
+###################################################################### Data 14 ############################################################################
+data_14 <- read_excel("S:/Supply Chain Projects/LOGISTICS/SCP/Cost Saving Reporting/Inventory Days On Hand/IQR Historical Data Collection/FG/Finished Goods Inventory Health (IQR) - 05.26.21.xlsx",
+                      sheet = "FG Jan 2021 without BKO & BKM")
+
+
+data_14[-2, ] -> data_14
+data_14 %>% 
+  janitor::clean_names() %>% 
+  dplyr::select(1:2) %>% 
+  dplyr::slice_head(n = 1) %>% 
+  dplyr::mutate(x2 = as.integer(x2),
+                x2 = as.Date(x2, origin = "1899-12-30")) %>% 
+  dplyr::pull() -> data_14_date 
+
+
+data_14[-1, ] -> data_14
+colnames(data_14) <- data_14[1, ]
+data_14[-1, ] -> data_14
+
+data_14 %>% 
+  janitor::clean_names() %>% 
+  data.frame() %>% 
+  dplyr::mutate(date = data_14_date) %>% 
+  dplyr::mutate(year = lubridate::year(date),
+                month = lubridate::month(date),
+                day = lubridate::day(date)) -> data_14
+
+rm(data_14_date)
+
+
+###################################################################### Data 15 ############################################################################
+data_15 <- read_excel("S:/Supply Chain Projects/LOGISTICS/SCP/Cost Saving Reporting/Inventory Days On Hand/IQR Historical Data Collection/FG/Finished Goods Inventory Health (IQR) - 06.09.21.xlsx",
+                      sheet = "FG Jan 2021 without BKO & BKM")
+
+
+data_15[-2, ] -> data_15
+data_15 %>% 
+  janitor::clean_names() %>% 
+  dplyr::select(1:2) %>% 
+  dplyr::slice_head(n = 1) %>% 
+  dplyr::mutate(x2 = as.integer(x2),
+                x2 = as.Date(x2, origin = "1899-12-30")) %>% 
+  dplyr::pull() -> data_15_date 
+
+
+data_15[-1, ] -> data_15
+colnames(data_15) <- data_15[1, ]
+data_15[-1, ] -> data_15
+
+data_15 %>% 
+  janitor::clean_names() %>% 
+  data.frame() %>% 
+  dplyr::mutate(date = data_15_date) %>% 
+  dplyr::mutate(year = lubridate::year(date),
+                month = lubridate::month(date),
+                day = lubridate::day(date)) -> data_15
+
+rm(data_15_date)
+
+
+
+###################################################################### Data 16 ############################################################################
+data_16 <- read_excel("S:/Supply Chain Projects/LOGISTICS/SCP/Cost Saving Reporting/Inventory Days On Hand/IQR Historical Data Collection/FG/Finished Goods Inventory Health (IQR) - 06.16.21.xlsx",
+                      sheet = "FG Jan 2021 without BKO & BKM")
+
+
+data_16[-2, ] -> data_16
+data_16 %>% 
+  janitor::clean_names() %>% 
+  dplyr::select(1:2) %>% 
+  dplyr::slice_head(n = 1) %>% 
+  dplyr::mutate(x2 = as.integer(x2),
+                x2 = as.Date(x2, origin = "1899-12-30")) %>% 
+  dplyr::pull() -> data_16_date 
+
+
+data_16[-1, ] -> data_16
+colnames(data_16) <- data_16[1, ]
+data_16[-1, ] -> data_16
+
+data_16 %>% 
+  janitor::clean_names() %>% 
+  data.frame() %>% 
+  dplyr::mutate(date = data_16_date) %>% 
+  dplyr::mutate(year = lubridate::year(date),
+                month = lubridate::month(date),
+                day = lubridate::day(date)) -> data_16
+
+rm(data_16_date)
+
+
+
+###################################################################### Data 17 ############################################################################
+data_17 <- read_excel("S:/Supply Chain Projects/LOGISTICS/SCP/Cost Saving Reporting/Inventory Days On Hand/IQR Historical Data Collection/FG/Finished Goods Inventory Health (IQR) - 06.23.21.xlsx",
+                      sheet = "FG Jan 2021 without BKO & BKM")
+
+
+data_17[-2, ] -> data_17
+data_17 %>% 
+  janitor::clean_names() %>% 
+  dplyr::select(1:2) %>% 
+  dplyr::slice_head(n = 1) %>% 
+  dplyr::mutate(x2 = as.integer(x2),
+                x2 = as.Date(x2, origin = "1899-12-30")) %>% 
+  dplyr::pull() -> data_17_date 
+
+
+data_17[-1, ] -> data_17
+colnames(data_17) <- data_17[1, ]
+data_17[-1, ] -> data_17
+
+data_17 %>% 
+  janitor::clean_names() %>% 
+  data.frame() %>% 
+  dplyr::mutate(date = data_17_date) %>% 
+  dplyr::mutate(year = lubridate::year(date),
+                month = lubridate::month(date),
+                day = lubridate::day(date)) -> data_17
+
+rm(data_17_date)
+
+
+
+###################################################################### Data 18 ############################################################################
+data_18 <- read_excel("S:/Supply Chain Projects/LOGISTICS/SCP/Cost Saving Reporting/Inventory Days On Hand/IQR Historical Data Collection/FG/Finished Goods Inventory Health (IQR) - 06.30.21.xlsx",
+                      sheet = "FG Jan 2021 without BKO & BKM")
+
+
+data_18[-2, ] -> data_18
+data_18 %>% 
+  janitor::clean_names() %>% 
+  dplyr::select(1:2) %>% 
+  dplyr::slice_head(n = 1) %>% 
+  dplyr::mutate(x2 = as.integer(x2),
+                x2 = as.Date(x2, origin = "1899-12-30")) %>% 
+  dplyr::pull() -> data_18_date 
+
+
+data_18[-1, ] -> data_18
+colnames(data_18) <- data_18[1, ]
+data_18[-1, ] -> data_18
+
+data_18 %>% 
+  janitor::clean_names() %>% 
+  data.frame() %>% 
+  dplyr::mutate(date = data_18_date) %>% 
+  dplyr::mutate(year = lubridate::year(date),
+                month = lubridate::month(date),
+                day = lubridate::day(date)) -> data_18
+
+rm(data_18_date)
+
+
+
+###################################################################### Data 19 ############################################################################
+data_19 <- read_excel("S:/Supply Chain Projects/LOGISTICS/SCP/Cost Saving Reporting/Inventory Days On Hand/IQR Historical Data Collection/FG/Finished Goods Inventory Health (IQR) - 07.07.21.xlsx",
+                      sheet = "FG Jan 2021 without BKO & BKM")
+
+
+data_19[-2, ] -> data_19
+data_19 %>% 
+  janitor::clean_names() %>% 
+  dplyr::select(1:2) %>% 
+  dplyr::slice_head(n = 1) %>% 
+  dplyr::mutate(x2 = as.integer(x2),
+                x2 = as.Date(x2, origin = "1899-12-30")) %>% 
+  dplyr::pull() -> data_19_date 
+
+
+data_19[-1, ] -> data_19
+colnames(data_19) <- data_19[1, ]
+data_19[-1, ] -> data_19
+
+data_19 %>% 
+  janitor::clean_names() %>% 
+  data.frame() %>% 
+  dplyr::mutate(date = data_19_date) %>% 
+  dplyr::mutate(year = lubridate::year(date),
+                month = lubridate::month(date),
+                day = lubridate::day(date)) -> data_19
+
+rm(data_19_date)
+
+
+
