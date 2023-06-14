@@ -3808,3 +3808,8 @@ writexl::write_xlsx(data_92_skim, "data_92_skim.xlsx")
 writexl::write_xlsx(data_95_skim, "data_95_skim.xlsx")
 writexl::write_xlsx(data_106_skim, "data_106_skim.xlsx")
 
+
+
+# Linda will double check and let me know, but for now, Data_70 to now is the data point
+
+
