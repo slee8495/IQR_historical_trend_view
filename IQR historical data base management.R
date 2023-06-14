@@ -18,7 +18,7 @@ library(lubridate)
 
 ###################################################################### Data 1 ############################################################################
 data_1 <- read_excel("S:/Supply Chain Projects/LOGISTICS/SCP/Cost Saving Reporting/Inventory Days On Hand/IQR Historical Data Collection/FG/2021/Finished Goods Inventory Health (IQR) - 01.06.21.xlsx",
-                     sheet = "FG Jan 2021 without BKO & BKM")
+                     sheet = "FG Dec 2020 without BKO & BKM")
 
 
 data_1[-2, ] -> data_1
@@ -3620,4 +3620,191 @@ data_119 %>%
 rm(data_119_date)
 
 
+
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+
+# Now, in order to do the rbind work.. all of the data columns should match..
+# Let's get all the file convert to rds format
+
+
+# save(data_1,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_1.rds")
+# save(data_2,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_2.rds")
+# save(data_3,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_3.rds")
+# save(data_4,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_4.rds")
+# save(data_5,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_5.rds")
+# save(data_6,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_6.rds")
+# save(data_7,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_7.rds")
+# save(data_8,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_8.rds")
+# save(data_9,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_9.rds")
+# save(data_10,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_10.rds")
+# save(data_11,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_11.rds")
+# save(data_12,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_12.rds")
+# save(data_13,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_13.rds")
+# save(data_14,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_14.rds")
+# save(data_15,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_15.rds")
+# save(data_16,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_16.rds")
+# save(data_17,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_17.rds")
+# save(data_18,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_18.rds")
+# save(data_19,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_19.rds")
+# save(data_20,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_20.rds")
+# save(data_21,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_21.rds")
+# save(data_22,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_22.rds")
+# save(data_23,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_23.rds")
+# save(data_24,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_24.rds")
+# save(data_25,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_25.rds")
+# save(data_26,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_26.rds")
+# save(data_27,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_27.rds")
+# save(data_28,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_28.rds")
+# save(data_29,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_29.rds")
+# save(data_30,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_30.rds")
+# save(data_31,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_31.rds")
+# save(data_32,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_32.rds")
+# save(data_33,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_33.rds")
+# save(data_34,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_34.rds")
+# save(data_35,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_35.rds")
+# save(data_36,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_36.rds")
+# save(data_37,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_37.rds")
+# save(data_38,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_38.rds")
+# save(data_39,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_39.rds")
+# save(data_40,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_40.rds")
+# save(data_41,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_41.rds")
+# save(data_42,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_42.rds")
+# save(data_43,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_43.rds")
+# save(data_44,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_44.rds")
+# save(data_45,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_45.rds")
+# save(data_46,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_46.rds")
+# save(data_47,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_47.rds")
+# save(data_48,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_48.rds")
+# save(data_49,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_49.rds")
+# save(data_50,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_50.rds")
+# save(data_51,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_51.rds")
+# save(data_52,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_52.rds")
+# save(data_53,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_53.rds")
+# save(data_54,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_54.rds")
+# save(data_55,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_55.rds")
+# save(data_56,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_56.rds")
+# save(data_57,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_57.rds")
+# save(data_58,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_58.rds")
+# save(data_59,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_59.rds")
+# save(data_60,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_60.rds")
+# save(data_61,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_61.rds")
+# save(data_62,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_62.rds")
+# save(data_63,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_63.rds")
+# save(data_64,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_64.rds")
+# save(data_65,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_65.rds")
+# save(data_66,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_66.rds")
+# save(data_67,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_67.rds")
+# save(data_68,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_68.rds")
+# save(data_69,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_69.rds")
+# save(data_70,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_70.rds")
+# save(data_71,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_71.rds")
+# save(data_72,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_72.rds")
+# save(data_73,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_73.rds")
+# save(data_74,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_74.rds")
+# save(data_75,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_75.rds")
+# save(data_76,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_76.rds")
+# save(data_77,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_77.rds")
+# save(data_78,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_78.rds")
+# save(data_79,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_79.rds")
+# save(data_80,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_80.rds")
+# save(data_81,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_81.rds")
+# save(data_82,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_82.rds")
+# save(data_83,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_83.rds")
+# save(data_84,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_84.rds")
+# save(data_85,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_85.rds")
+# save(data_86,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_86.rds")
+# save(data_87,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_87.rds")
+# save(data_88,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_88.rds")
+# save(data_89,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_89.rds")
+# save(data_90,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_90.rds")
+# save(data_91,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_91.rds")
+# save(data_92,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_92.rds")
+# save(data_93,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_93.rds")
+# save(data_94,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_94.rds")
+# save(data_95,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_95.rds")
+# save(data_96,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_96.rds")
+# save(data_97,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_97.rds")
+# save(data_98,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_98.rds")
+# save(data_99,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_99.rds")
+# save(data_100,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_100.rds")
+# save(data_101,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_101.rds")
+# save(data_102,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_102.rds")
+# save(data_103,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_103.rds")
+# save(data_104,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_104.rds")
+# save(data_105,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_105.rds")
+# save(data_106,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_106.rds")
+# save(data_107,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_107.rds")
+# save(data_108,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_108.rds")
+# save(data_109,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_109.rds")
+# save(data_110,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_110.rds")
+# save(data_111,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_111.rds")
+# save(data_112,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_112.rds")
+# save(data_113,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_113.rds")
+# save(data_114,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_114.rds")
+# save(data_115,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_115.rds")
+# save(data_116,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_116.rds")
+# save(data_117,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_117.rds")
+# save(data_118,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_118.rds")
+# save(data_119,file = "C:/Users/slee/OneDrive - Ventura Foods/Stan/R Codes/Projects/IQR/venturafoods_IQR_historical_trend_view/rds/data_119.rds")
+
+
+
+# Match columns for all data
+
+skim(data_1) %>% data.frame() %>% select(2) -> data_1_skim
+skim(data_2) %>% data.frame() %>% select(2) -> data_2_skim
+skim(data_5) %>% data.frame() %>% select(2) -> data_5_skim
+skim(data_6) %>% data.frame() %>% select(2) -> data_6_skim
+skim(data_9) %>% data.frame() %>% select(2) -> data_9_skim
+skim(data_10) %>% data.frame() %>% select(2) -> data_10_skim
+skim(data_13) %>% data.frame() %>% select(2) -> data_13_skim
+skim(data_18) %>% data.frame() %>% select(2) -> data_18_skim
+skim(data_20) %>% data.frame() %>% select(2) -> data_20_skim
+skim(data_21) %>% data.frame() %>% select(2) -> data_21_skim
+skim(data_31) %>% data.frame() %>% select(2) -> data_31_skim
+skim(data_36) %>% data.frame() %>% select(2) -> data_36_skim
+skim(data_69) %>% data.frame() %>% select(2) -> data_69_skim
+skim(data_70) %>% data.frame() %>% select(2) -> data_70_skim
+skim(data_74) %>% data.frame() %>% select(2) -> data_74_skim
+skim(data_75) %>% data.frame() %>% select(2) -> data_75_skim
+skim(data_83) %>% data.frame() %>% select(2) -> data_83_skim
+skim(data_84) %>% data.frame() %>% select(2) -> data_84_skim
+skim(data_87) %>% data.frame() %>% select(2) -> data_87_skim
+skim(data_88) %>% data.frame() %>% select(2) -> data_88_skim
+skim(data_91) %>% data.frame() %>% select(2) -> data_91_skim
+skim(data_92) %>% data.frame() %>% select(2) -> data_92_skim
+skim(data_95) %>% data.frame() %>% select(2) -> data_95_skim
+skim(data_106) %>% data.frame() %>% select(2) -> data_106_skim
+
+skim(data_119) %>% data.frame() %>% select(2) -> data_119_skim
+
+
+
+writexl::write_xlsx(data_1_skim, "data_1_skim.xlsx")
+writexl::write_xlsx(data_2_skim, "data_2_skim.xlsx")
+writexl::write_xlsx(data_5_skim, "data_5_skim.xlsx")
+writexl::write_xlsx(data_6_skim, "data_6_skim.xlsx")
+writexl::write_xlsx(data_9_skim, "data_9_skim.xlsx")
+writexl::write_xlsx(data_10_skim, "data_10_skim.xlsx")
+writexl::write_xlsx(data_13_skim, "data_13_skim.xlsx")
+writexl::write_xlsx(data_18_skim, "data_18_skim.xlsx")
+writexl::write_xlsx(data_20_skim, "data_20_skim.xlsx")
+writexl::write_xlsx(data_21_skim, "data_21_skim.xlsx")
+writexl::write_xlsx(data_31_skim, "data_31_skim.xlsx")
+writexl::write_xlsx(data_36_skim, "data_36_skim.xlsx")
+writexl::write_xlsx(data_69_skim, "data_69_skim.xlsx")
+writexl::write_xlsx(data_70_skim, "data_70_skim.xlsx")
+writexl::write_xlsx(data_74_skim, "data_74_skim.xlsx")
+writexl::write_xlsx(data_75_skim, "data_75_skim.xlsx")
+writexl::write_xlsx(data_83_skim, "data_83_skim.xlsx")
+writexl::write_xlsx(data_84_skim, "data_84_skim.xlsx")
+writexl::write_xlsx(data_87_skim, "data_87_skim.xlsx")
+writexl::write_xlsx(data_88_skim, "data_88_skim.xlsx")
+writexl::write_xlsx(data_91_skim, "data_91_skim.xlsx")
+writexl::write_xlsx(data_92_skim, "data_92_skim.xlsx")
+writexl::write_xlsx(data_95_skim, "data_95_skim.xlsx")
+writexl::write_xlsx(data_106_skim, "data_106_skim.xlsx")
 
